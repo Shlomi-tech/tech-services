@@ -3,13 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שלומי - שירותי מחשבים מקצועיים</title>
+    <title>שירותי מחשבים מקצועיים</title>
     <style>
-        @page {
-            size: A4;
-            margin: 0;
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -17,22 +12,21 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            width: 210mm;
-            height: 297mm;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            padding: 20px;
         }
 
         .ad-container {
-            width: 190mm;
-            height: 277mm;
+            max-width: 800px;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             position: relative;
         }
@@ -40,145 +34,227 @@
         .header {
             background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
-            padding: 25mm 20mm;
+            padding: 40px 30px;
             text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 8mm;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .header .subtitle {
-            font-size: 1.1em;
+            font-size: 1.2em;
             opacity: 0.9;
+            position: relative;
+            z-index: 2;
         }
 
         .content {
-            padding: 20mm;
+            padding: 40px 30px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15mm;
-            margin-bottom: 20mm;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
         }
 
         .service-card {
             background: linear-gradient(145deg, #f8f9fa, #e9ecef);
-            border-radius: 10mm;
-            padding: 15mm;
+            border-radius: 15px;
+            padding: 25px;
             text-align: center;
+            transition: all 0.3s ease;
             border: 1px solid rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
         .service-icon {
-            font-size: 2.5em;
-            margin-bottom: 8mm;
+            font-size: 3em;
+            margin-bottom: 15px;
             color: #3498db;
+            position: relative;
+            z-index: 2;
         }
 
         .service-title {
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #2c3e50;
-            margin-bottom: 5mm;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
         }
 
         .service-desc {
             color: #7f8c8d;
-            line-height: 1.5;
-            font-size: 0.9em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
         }
 
         .contact-section {
             background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
             color: white;
-            padding: 15mm;
+            padding: 30px;
             text-align: center;
-            margin: -20mm;
-            margin-top: 0;
-            border-radius: 0 0 15px 15px;
+            margin: -30px;
+            margin-top: 20px;
         }
 
         .contact-title {
-            font-size: 1.6em;
-            margin-bottom: 10mm;
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
 
         .contact-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8mm;
-            margin-bottom: 15mm;
-            text-align: right;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 5mm;
-            font-size: 1em;
-            background: rgba(255,255,255,0.1);
-            padding: 5mm;
-            border-radius: 5mm;
+            gap: 10px;
+            font-size: 1.1em;
         }
 
-        .contact-item span:first-child {
-            font-size: 1.2em;
+        .contact-item i {
+            font-size: 1.3em;
             color: #3498db;
         }
 
-        .cta-section {
+        .cta-button {
             background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
-            padding: 8mm;
-            border-radius: 25px;
-            margin-bottom: 8mm;
-            text-align: center;
-        }
-
-        .cta-text {
-            font-size: 1.3em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
             font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
         }
 
-        .benefits {
-            font-size: 0.9em;
-            opacity: 0.9;
-            margin-top: 8mm;
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
         }
 
-        .decorative-border {
+        .decorative-elements {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            border: 3px solid rgba(52, 152, 219, 0.3);
-            border-radius: 15px;
             pointer-events: none;
+            overflow: hidden;
         }
 
-        @media print {
-            body {
-                background: white !important;
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(52, 152, 219, 0.1);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            bottom: 15%;
+            left: 5%;
+            animation-delay: 2s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
             }
             
-            .ad-container {
-                box-shadow: none;
-                border: 2px solid #3498db;
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
     <div class="ad-container">
-        <div class="decorative-border"></div>
+        <div class="decorative-elements">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
         
         <div class="header">
             <h1>🖥️ שלומי - שירותי מחשבים מקצועיים</h1>
@@ -232,12 +308,8 @@
                         <span>זמין 24/6</span>
                     </div>
                 </div>
-                
-                <div class="cta-section">
-                    <div class="cta-text">📞 התקשר עכשיו לייעוץ חינם!</div>
-                </div>
-                
-                <div class="benefits">✅ שירות מהיר ואמין ✅ מחירים הוגנים ✅ אחריות מלאה</div>
+                <button class="cta-button" onclick="window.open('tel:058-666-8133', '_self')">📞 התקשר עכשיו</button>
+                <p style="margin-top: 15px; opacity: 0.8;">✅ שירות מהיר ואמין ✅ מחירים הוגנים ✅ אחריות מלאה</p>
             </div>
         </div>
     </div>
