@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שלומי - שירותי מחשבים מקצועיים</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 210mm;
+            height: 297mm;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .ad-container {
+            width: 190mm;
+            height: 277mm;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 25mm 20mm;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8mm;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 20mm;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15mm;
+            margin-bottom: 20mm;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border-radius: 10mm;
+            padding: 15mm;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5em;
+            margin-bottom: 8mm;
+            color: #3498db;
+        }
+
+        .service-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5mm;
+        }
+
+        .service-desc {
+            color: #7f8c8d;
+            line-height: 1.5;
+            font-size: 0.9em;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+            padding: 15mm;
+            text-align: center;
+            margin: -20mm;
+            margin-top: 0;
+            border-radius: 0 0 15px 15px;
+        }
+
+        .contact-title {
+            font-size: 1.6em;
+            margin-bottom: 10mm;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8mm;
+            margin-bottom: 15mm;
+            text-align: right;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5mm;
+            font-size: 1em;
+            background: rgba(255,255,255,0.1);
+            padding: 5mm;
+            border-radius: 5mm;
+        }
+
+        .contact-item span:first-child {
+            font-size: 1.2em;
+            color: #3498db;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 8mm;
+            border-radius: 25px;
+            margin-bottom: 8mm;
+            text-align: center;
+        }
+
+        .cta-text {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .benefits {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 8mm;
+        }
+
+        .decorative-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid rgba(52, 152, 219, 0.3);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        @media print {
+            body {
+                background: white !important;
+            }
+            
+            .ad-container {
+                box-shadow: none;
+                border: 2px solid #3498db;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ad-container">
+        <div class="decorative-border"></div>
+        
+        <div class="header">
+            <h1>🖥️ שלומי - שירותי מחשבים מקצועיים</h1>
+            <p class="subtitle">פתרונות טכנולוגיים מתקדמים לבית ולעסק</p>
+        </div>
+
+        <div class="content">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <div class="service-title">התקנת תוכנות</div>
+                    <div class="service-desc">התקנה מקצועית של כל סוגי התוכנות, עדכונים ואופטימיזציה למחשב שלך</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <div class="service-title">מערכות הפעלה</div>
+                    <div class="service-desc">התקנה ושדרוג Windows מקצועי עם מעבר חלק של כל הנתונים והגדרות</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <div class="service-title">תחזוקה ופתרונות</div>
+                    <div class="service-desc">ניקוי, אבחון תקלות, שחזור וגיבוי נתונים, עבודה עם תיקיות רשת ותיקון חומרה</div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <div class="service-title">רשתות וחיבורים</div>
+                    <div class="service-desc">הקמת רשתות ביתיות ועסקיות, Wi-Fi, שיתוף קבצים ופתרון בעיות חיבור</div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 class="contact-title">📞 צור קשר עכשיו</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span>058-666-8133</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>7692227@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>איזור רחובות</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>🕒</span>
+                        <span>זמין 24/6</span>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <div class="cta-text">📞 התקשר עכשיו לייעוץ חינם!</div>
+                </div>
+                
+                <div class="benefits">✅ שירות מהיר ואמין ✅ מחירים הוגנים ✅ אחריות מלאה</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
