@@ -71,9 +71,16 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
             gap: 20px;
             margin-bottom: 30px;
+        }
+
+        .featured-service {
+            grid-column: 1 / -1;
+            background: linear-gradient(145deg, #e8f4fd, #d1ecf1);
+            border: 2px solid #3498db;
         }
 
         .service-card {
@@ -198,16 +205,22 @@
 <body>
     <div class="ad-container">
         <div class="header">
-            <h1>שלומי מוזס<br>שירותי מחשבים מקצועיים 🖥️</h1>
+            <h1>שלומי מוזס<br>מכירת מחשבים 🖥️<br>ושירותי מחשבים מקצועיים</h1>
             <p class="subtitle">פתרונות טכנולוגיים מתקדמים לבית ולעסק</p>
         </div>
 
         <div class="content">
             <div class="services-grid">
+                <div class="service-card featured-service">
+                    <div class="service-icon">🛒</div>
+                    <div class="service-title">מכירת מחשבים</div>
+                    <div class="service-desc">מחשבים איכותיים עם התקנת Windows • מחשבי משרד ועסקים<br>מחשבים חזקים לעבודה מאומצת • ייעוץ והתאמה אישית לצרכים</div>
+                </div>
+
                 <div class="service-card">
                     <div class="service-icon">💻</div>
                     <div class="service-title">התקנת תוכנות</div>
-                    <div class="service-desc">התקנה מקצועית של כל סוגי התוכנות, עדכונים ואופטימיזציה למחשב שלך</div>
+                    <div class="service-desc">Office (Word, Excel, PowerPoint), Adobe (Photoshop, Premiere Pro, Illustrator), תוכנות אנטי-וירוס, דפדפנים, נגני מדיה ותוכנות גרפיקה מתקדמות</div>
                 </div>
 
                 <div class="service-card">
@@ -225,7 +238,7 @@
                 <div class="service-card">
                     <div class="service-icon">🌐</div>
                     <div class="service-title">רשתות וחיבורים</div>
-                    <div class="service-desc">הקמת רשתות ביתיות ועסקיות, Wi-Fi, שיתוף קבצים ופתרון בעיות חיבור</div>
+                    <div class="service-desc">הקמת רשתות ביתיות ועסקיות, WiFi, שיתוף קבצים ופתרון בעיות חיבור</div>
                 </div>
             </div>
 
