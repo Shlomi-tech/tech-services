@@ -172,9 +172,9 @@
             font-size: 1.1em;
         }
 
-        .contact-item i {
-            font-size: 1.3em;
-            color: #3498db;
+        .contact-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .cta-button {
@@ -291,15 +291,15 @@
             <div class="contact-section">
                 <h2 class="contact-title">📞 צור קשר עכשיו</h2>
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item" onclick="window.open('tel:058-666-8133', '_self')" style="cursor: pointer;">
                         <span>📱</span>
                         <span>058-666-8133</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item" onclick="window.open('mailto:7692227@gmail.com', '_self')" style="cursor: pointer;">
                         <span>📧</span>
                         <span>7692227@gmail.com</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item" onclick="window.open('https://maps.google.com/?q=רחובות', '_blank')" style="cursor: pointer;">
                         <span>📍</span>
                         <span>איזור רחובות</span>
                     </div>
@@ -308,7 +308,10 @@
                         <span>זמין 24/6</span>
                     </div>
                 </div>
-                <button class="cta-button" onclick="window.open('tel:058-666-8133', '_self')">📞 התקשר עכשיו</button>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <button class="cta-button" onclick="window.open('tel:058-666-8133', '_self')" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">📞 התקשר עכשיו</button>
+                    <button class="cta-button" onclick="window.open('https://wa.me/972586668133?text=היי%20שלומי,%20אני%20מעוניין%20בשירותי%20מחשבים', '_blank')" style="background: linear-gradient(135deg, #25d366, #128c7e);">💬 שלח WhatsApp</button>
+                </div>
                 <p style="margin-top: 15px; opacity: 0.8;">✅ שירות מהיר ואמין ✅ מחירים הוגנים ✅ אחריות מלאה</p>
             </div>
         </div>
