@@ -106,8 +106,17 @@
             line-height: 1.6;
         }
 
-        .mobile-line {
-            display: inline;
+        .desktop-line {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .desktop-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .mobile-only {
+            display: none;
         }
 
         .contact-section {
@@ -230,12 +239,19 @@
                 padding: 20px;
             }
 
-            .mobile-line {
+            .desktop-line {
+                display: none;
+            }
+
+            .mobile-only {
                 display: block;
+            }
+
+            .mobile-item {
                 margin-bottom: 8px;
             }
 
-            .mobile-line:last-child {
+            .mobile-item:last-child {
                 margin-bottom: 0;
             }
 
@@ -320,8 +336,12 @@
                     <div class="service-icon">🛒</div>
                     <div class="service-title">מכירת מחשבים</div>
                     <div class="service-desc">
-                        <span class="mobile-line">מחשבים איכותיים עם התקנת Windows • מחשבי משרד ועסקים</span>
-                        <span class="mobile-line">מחשבים חזקים לעבודה מאומצת • ייעוץ והתאמה אישית לצרכים</span>
+                        <span class="desktop-line">מחשבים איכותיים עם התקנת Windows • מחשבי משרד ועסקים</span>
+                        <span class="desktop-line">מחשבים חזקים לעבודה מאומצת • ייעוץ והתאמה אישית לצרכים</span>
+                        <span class="mobile-only mobile-item">מחשבים איכותיים עם התקנת Windows</span>
+                        <span class="mobile-only mobile-item">מחשבי משרד ועסקים</span>
+                        <span class="mobile-only mobile-item">מחשבים חזקים לעבודה מאומצת</span>
+                        <span class="mobile-only mobile-item">ייעוץ והתאמה אישית לצרכים</span>
                     </div>
                 </div>
 
