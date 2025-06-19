@@ -32,6 +32,7 @@
         .header {
             text-align: center;
             margin-bottom: 50px;
+            width: 100%;
         }
 
         .header h1 {
@@ -46,6 +47,8 @@
             color: #7f8c8d;
             font-size: 1.2em;
             margin-bottom: 20px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .services-section {
@@ -101,6 +104,10 @@
             color: #5a6c7d;
             font-size: 1em;
             line-height: 1.6;
+        }
+
+        .mobile-line {
+            display: inline;
         }
 
         .contact-section {
@@ -205,6 +212,11 @@
                 font-size: 1.8em;
             }
 
+            .header p {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -216,6 +228,15 @@
 
             .service-card {
                 padding: 20px;
+            }
+
+            .mobile-line {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .mobile-line:last-child {
+                margin-bottom: 0;
             }
 
             .contact-grid {
@@ -298,7 +319,10 @@
                 <div class="service-card featured-service">
                     <div class="service-icon">🛒</div>
                     <div class="service-title">מכירת מחשבים</div>
-                    <div class="service-desc">מחשבים איכותיים עם התקנת Windows • מחשבי משרד ועסקים<br>מחשבים חזקים לעבודה מאומצת • ייעוץ והתאמה אישית לצרכים</div>
+                    <div class="service-desc">
+                        <span class="mobile-line">מחשבים איכותיים עם התקנת Windows • מחשבי משרד ועסקים</span>
+                        <span class="mobile-line">מחשבים חזקים לעבודה מאומצת • ייעוץ והתאמה אישית לצרכים</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
