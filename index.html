@@ -23,6 +23,10 @@
             padding: 40px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .header {
@@ -45,7 +49,8 @@
         }
 
         .services-section {
-            max-width: 1200px;
+            max-width: 900px;
+            width: 100%;
             margin: 0 auto 60px auto;
         }
 
@@ -99,7 +104,8 @@
         }
 
         .contact-section {
-            max-width: 1000px;
+            max-width: 700px;
+            width: 100%;
             margin: 0 auto;
             text-align: center;
         }
@@ -153,8 +159,9 @@
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -254,6 +261,8 @@
         @media (min-width: 1025px) {
             .contact-grid {
                 grid-template-columns: repeat(4, 1fr);
+                max-width: 600px;
+                margin: 0 auto 40px auto;
             }
 
             .contact-item:nth-child(3) {
@@ -264,6 +273,10 @@
             .contact-item:nth-child(4) {
                 grid-column: 2;
                 grid-row: 2;
+            }
+
+            .cta-buttons {
+                flex-direction: row;
             }
         }
     </style>
