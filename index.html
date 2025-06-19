@@ -108,11 +108,15 @@
 
         .desktop-line {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .desktop-line:last-child {
             margin-bottom: 0;
+        }
+
+        .desktop-only {
+            display: inline;
         }
 
         .mobile-only {
@@ -248,7 +252,7 @@
             }
 
             .mobile-item {
-                margin-bottom: 8px;
+                margin-bottom: 4px;
             }
 
             .mobile-item:last-child {
@@ -348,19 +352,33 @@
                 <div class="service-card">
                     <div class="service-icon">💻</div>
                     <div class="service-title">התקנת תוכנות</div>
-                    <div class="service-desc">Office (Word, Excel, PowerPoint), Adobe&nbsp;(Photoshop,&nbsp;Premiere&nbsp;Pro,&nbsp;Illustrator), תוכנות אנטי-וירוס, דפדפנים, נגני מדיה ותוכנות גרפיקה מתקדמות</div>
+                    <div class="service-desc">
+                        <span class="desktop-only">Office (Word, Excel, PowerPoint), Adobe&nbsp;(Photoshop,&nbsp;Premiere&nbsp;Pro,&nbsp;Illustrator), תוכנות אנטי-וירוס, דפדפנים, נגני מדיה ותוכנות גרפיקה מתקדמות</span>
+                        <span class="mobile-only mobile-item">Office (Word, Excel, PowerPoint)</span>
+                        <span class="mobile-only mobile-item">Adobe (Photoshop, Premiere Pro, Illustrator)</span>
+                        <span class="mobile-only mobile-item">תוכנות אנטי-וירוס, דפדפנים, נגני מדיה</span>
+                        <span class="mobile-only mobile-item">ותוכנות גרפיקה מתקדמות</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">⚙️</div>
                     <div class="service-title">מערכות הפעלה</div>
-                    <div class="service-desc">התקנה ושדרוג Windows מקצועי עם מעבר חלק של כל הנתונים והגדרות</div>
+                    <div class="service-desc">
+                        <span class="desktop-only">התקנה ושדרוג Windows מקצועי עם מעבר חלק של כל הנתונים והגדרות</span>
+                        <span class="mobile-only mobile-item">התקנה ושדרוג Windows מקצועי</span>
+                        <span class="mobile-only mobile-item">עם מעבר חלק של כל הנתונים והגדרות</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon">🔧</div>
                     <div class="service-title">תחזוקה ופתרונות</div>
-                    <div class="service-desc">ניקוי, אבחון תקלות, שחזור וגיבוי נתונים, עבודה עם תיקיות רשת ותיקון חומרה</div>
+                    <div class="service-desc">
+                        <span class="desktop-only">ניקוי, אבחון תקלות, שחזור וגיבוי נתונים, עבודה עם תיקיות רשת ותיקון חומרה</span>
+                        <span class="mobile-only mobile-item">ניקוי, אבחון תקלות, שחזור וגיבוי נתונים</span>
+                        <span class="mobile-only mobile-item">עבודה עם תיקיות רשת ותיקון חומרה</span>
+                    </div>
                 </div>
 
                 <div class="service-card">
