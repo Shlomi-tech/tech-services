@@ -132,11 +132,15 @@
             border: 2px solid #3498db;
             backdrop-filter: blur(5px);
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .contact-item:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(52, 152, 219, 0.2);
+            cursor: pointer;
         }
 
         .contact-icon {
@@ -327,20 +331,20 @@
             <div class="contact-title">צור קשר עכשיו 📞</div>
             
             <div class="contact-grid">
-                <div class="contact-item">
+                <a href="tel:058-666-8133" class="contact-item">
                     <div class="contact-icon">📞</div>
                     <div class="contact-item-title">טלפון</div>
                     <div class="contact-detail">058-666-8133</div>
-                </div>
-                <div class="contact-item">
+                </a>
+                <a href="mailto:7692227@gmail.com" class="contact-item">
                     <div class="contact-icon">📧</div>
                     <div class="contact-item-title">מייל</div>
                     <div class="contact-detail">7692227@gmail.com</div>
-                </div>
-                <div class="contact-item">
+                </a>
+                <a href="https://maps.google.com?q=רחובות" class="contact-item">
                     <div class="contact-icon">📍</div>
                     <div class="contact-item-title">איזור רחובות</div>
-                </div>
+                </a>
                 <div class="contact-item">
                     <div class="contact-icon">🕐</div>
                     <div class="contact-item-title">זמין 24/6</div>
