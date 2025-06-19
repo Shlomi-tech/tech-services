@@ -19,7 +19,6 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
-            overflow-x: auto;
         }
 
         .ad-container {
@@ -30,7 +29,6 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
-            min-width: 800px;
         }
 
         .header {
@@ -83,6 +81,29 @@
             grid-column: 1 / -1;
             background: linear-gradient(145deg, #e8f4fd, #d1ecf1);
             border: 2px solid #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .featured-service {
+                grid-column: 1;
+            }
+            
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .contact-grid {
+                gap: 10px;
+            }
+            
+            .contact-item {
+                padding: 12px;
+            }
         }
 
         .service-card {
