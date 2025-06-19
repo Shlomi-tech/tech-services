@@ -18,12 +18,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
+            margin: 0;
         }
 
         .ad-container {
             max-width: 800px;
-            margin: 20px auto;
+            width: 100%;
+            margin: 10px auto;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             overflow: hidden;
@@ -98,11 +100,37 @@
             }
             
             .contact-grid {
-                gap: 10px;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
             }
             
             .contact-item {
-                padding: 12px;
+                padding: 10px;
+                font-size: 0.9em;
+            }
+            
+            .ad-container {
+                margin: 5px;
+                border-radius: 15px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .contact-item:nth-child(3) {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            
+            .contact-item:nth-child(4) {
+                grid-column: 2;
+                grid-row: 2;
             }
         }
 
